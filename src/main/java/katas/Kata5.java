@@ -18,7 +18,15 @@ import java.util.Map;
 public class Kata5 {
     public static Double execute() {
         List<Movie> movies = DataUtil.getMovies();
+        Double mayorPuntuacion = movies.stream().reduce((p1,p2)-> p1.getRating() > p2.getRating()? p1 : p2)
+                .get()
+                .getRating();
 
-        return 3.0;
+
+        return mayorPuntuacion;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(execute());
     }
 }
