@@ -10,6 +10,6 @@ public class Kata6Test {
 
     @Test
     public void testExecute() {
-        Assert.assertThat(Kata6.execute(), equalTo(5.0));
+        Assert.assertThat(Kata6.execute(), equalTo("Optional[URL: http://cdn-0.nflximg.com/images/2891/Fracture300.jpg]"));
     }
 }
